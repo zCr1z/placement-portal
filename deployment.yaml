@@ -1,0 +1,47 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placement-portal
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 90
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: placement-portal
+  template:
+    metadata:
+      labels:
+        app: placement-portal
+    spec:
+      containers:
+        - name: placement-portal
+          image: IMAGE_PLACEHOLDER
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: placement-portal-service
+spec:
+  type: NodePort
+  selector:
+    app: placement-portal
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080

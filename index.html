@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Placement Portal</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fc;
+  color: #172554;
+}
+header {
+  background: #173b75;
+  color: white;
+  padding: 24px 7%;
+}
+header h1 { margin: 0 0 8px; }
+nav { margin-top: 18px; }
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+main { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+.hero {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #17255412;
+}
+.number { font-size: 30px; font-weight: bold; color: #2563eb; }
+.tag {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Student Placement Portal</h1>
+  <p>Your gateway to internships and career opportunities</p>
+  <nav>
+    <a href="#stats">Statistics</a>
+    <a href="#companies">Companies</a>
+    <a href="#drives">Recruitment Drives</a>
+    <a href="#students">Students</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Welcome to Campus Placements 2026</h2>
+    <p>Explore companies, check eligibility and discover upcoming
+       recruitment opportunities through the university placement cell.</p>
+    <span class="tag">Placement registration open</span>
+  </section>
+
+  <section id="stats">
+    <h2>Placement Statistics</h2>
+    <div class="stats">
+      <div class="card">
+        <p>Students Placed</p><div class="number">850+</div>
+      </div>
+      <div class="card">
+        <p>Recruiting Companies</p><div class="number">120+</div>
+      </div>
+      <div class="card">
+        <p>Highest Package</p><div class="number">₹45 LPA</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="companies">
+    <h2>Featured Companies</h2>
+    <div class="stats">
+      <div class="card"><h3>Google</h3><p>Software Engineering</p>
+        <p>Eligibility: Relevant degree and coding skills</p></div>
+      <div class="card"><h3>Microsoft</h3><p>Software Development</p>
+        <p>Eligibility: Strong programming fundamentals</p></div>
+      <div class="card"><h3>Infosys</h3><p>Systems Engineering</p>
+        <p>Eligibility: Meet the academic criteria</p></div>
+    </div>
+  </section>
+
+  <section id="drives">
+    <h2>Upcoming Recruitment Drives</h2>
+    <div class="card">
+      <h3>Software Developer Recruitment</h3>
+      <p>Company: Microsoft | Date: 25 October 2026</p>
+      <p>Eligibility: Check the official placement-cell notice.</p>
+      <span class="tag">Upcoming</span>
+    </div>
+    <div class="card" style="margin-top:15px">
+      <h3>Graduate Engineer Recruitment</h3>
+      <p>Company: Infosys | Date: 30 October 2026</p>
+      <p>Eligibility: Check the official placement-cell notice.</p>
+      <span class="tag">Registration open</span>
+    </div>
+  </section>
+
+  <section id="students">
+    <h2>Student Profiles</h2>
+    <div class="card">
+      <h3>Student A — Computer Science</h3>
+      <p>Skills: Java, Data Structures and Algorithms</p>
+      <p>Placement status: Placed</p>
+    </div>
+    <div class="card" style="margin-top:15px">
+      <h3>Student B — Software Engineering</h3>
+      <p>Skills: Python, Web Development and SQL</p>
+      <p>Placement status: Actively seeking opportunities</p>
+    </div>
+  </section>
+</main>
+
+<footer>University Placement Cell | Student Placement Portal</footer>
+</body>
+</html>
